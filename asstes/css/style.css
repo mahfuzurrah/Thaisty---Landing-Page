@@ -2,10 +2,10 @@
 
 :root {
   /* COLOR */
-  --primary-color: #f7511e;
-  /* --secondary-color: #1a1a1c;
-    --title-color: #0d1118;
-    --description-color: #232429; */
+  --primary-color: #2871a8;
+  /* --secondary-color: #1a1a1c; */
+  --title-color: #0d1118;
+  --description-color: #232429;
   --white-color: #ffffff;
   --border-color: #e4e5e7;
   --body-color: #0c160d;
@@ -60,8 +60,8 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  color: var(--white-color);
-  background: var(--body-color);
+  color: var(--title-color);
+  background: var(--white-color);
 }
 
 h1,
@@ -76,19 +76,19 @@ a {
 
 h1 {
   font-size: var(--h1-font-size);
-  color: var(--white-color);
+  color: var(--title-color);
   font-weight: 600;
 }
 
 h2 {
   font-size: var(--h2-font-size);
-  color: var(--white-color);
+  color: var(--title-color);
   font-weight: 600;
 }
 
 h3 {
   font-size: var(--h3-font-size);
-  color: var(--white-color);
+  color: var(--title-color);
   font-weight: 600;
 }
 
@@ -106,7 +106,7 @@ ul {
 
 a {
   text-decoration: none !important;
-  color: var(--white-color);
+  color: var(--title-color);
 }
 
 img {
@@ -128,7 +128,7 @@ section {
 }
 
 .section_title p {
-  color: var(--white-color);
+  color: var(--description-color);
 }
 
 .icons {
@@ -141,7 +141,7 @@ section {
   border-radius: 500px;
   padding: 12px 24px;
   overflow: hidden;
-  background: #f7511e;
+  background: #2871a8;
   color: var(--white-color);
   font-size: 16px;
   font-family: var(--body-font);
@@ -150,7 +150,7 @@ section {
 }
 
 .btn_sec {
-  border: 2px solid #f7511e;
+  border: 2px solid #2871a8;
   border-radius: 500px;
   padding: 12px 24px;
   overflow: hidden;
@@ -164,10 +164,12 @@ section {
 
 .btn:hover {
   background: #ce4318;
+  color: var(--white-color);
 }
 
 .btn_sec:hover {
   background: #ce4318;
+  color: var(--white-color);
 }
 
 /* ================== Top Navbar =================== */
@@ -190,19 +192,24 @@ section {
 
 .header.scrolled .navbar {
   margin-top: 0;
+  background: var(--primary-color);
 }
 
 .top_navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: #2871a8;
   text-align: center;
   padding: 8px 0;
 }
 
-.top_navbar p {
+.top_navbar a {
   color: var(--white-color);
+}
+
+.top_navbar p {
+  color: var(--title-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
 }
@@ -223,13 +230,27 @@ section {
   color: var(--white-color) !important;
 }
 
+.header.scrolled .navbar .btn{
+  background: transparent;
+  border:1px solid var(--white-color);
+}
+
+.header.scrolled .navbar .btn:hover{
+  background:#ce4318;
+  border:1px solid #ce4318;
+}
+
 .navbar-toggle,
 .mobile_btn {
   display: none;
 }
 
-@media screen and (max-width: 991px) {
+.header.scrolled .logo h3,
+.navbar-toggle .icons {
+  color: var(--white-color) !important;
+}
 
+@media screen and (max-width: 991px) {
   .navbar-toggle,
   .mobile_btn {
     display: block;
@@ -241,13 +262,16 @@ section {
 
   .nav_menu {
     position: absolute;
-    top: 80px;
+    top: 75px;
     right: -100%;
     width: 250px;
     height: 100vh;
-    background: #000;
+    background: var(--primary-color);
     padding: 20px;
     transition: all 0.5s ease-in-out;
+  }
+  .nav_menu a {
+    color: var(--white-color);
   }
 
   .nav_menu.show {
@@ -267,12 +291,12 @@ section {
 
 .banner {
   width: 100%;
-  height: 100vh;
-  background: rgba(255, 255, 255, 0.1);
+  height: 100%;
+  background: #2871a828;
 }
 
 .banner .banner_content {
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -332,9 +356,9 @@ section {
   justify-content: center;
   width: 100%;
   padding: 50px;
-  background: #ffffff1a;
   border-radius: 24px;
   position: relative;
+  background: #2871a8;
 }
 
 .discount .discount_content .text {
@@ -350,6 +374,22 @@ section {
 .discount .discount_content .dis_img {
   position: absolute;
   left: 0;
+}
+
+.discount h2,
+.discount p,
+.discount a {
+  color: var(--white-color);
+}
+
+.discount .btn {
+  background: transparent;
+  border: 1px solid var(--white-color);
+}
+
+.discount .btn:hover {
+  background: #ce4318;
+  border: 1px solid #ce4318;
 }
 
 /* ================== Shop Info =================== */
@@ -372,36 +412,46 @@ section {
 
 /* ================== Map =================== */
 
-.map .map_text_content .location_info .list{
+.map .map_text_content .location_info .list {
   display: flex;
   gap: 16px;
   margin-top: 36px;
 }
 
-.map .map_text_content .location_info .list .info_text h5{
+.map .map_text_content .location_info .list .info_text h5 {
   font-size: 18px;
   margin-bottom: 4px;
 }
 
-.map .map_text_content .location_info .list .list_icons{
-width: 50px;
-height: 50px;
-background: var(--primary-color);
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 8px;
+.map .map_text_content .location_info .list .list_icons {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.map .map_text_content .location_info .list .list_icons .icons {
+  color: var(--white-color);
 }
 
 /* ================== footer =================== */
 
 .footer {
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--primary-color);
 }
 
 .footer h4 {
   font-size: 20px;
+  color: var(--white-color);
+}
+
+.footer h2,
+.footer p,
+.footer a {
+  color: var(--white-color);
 }
 
 .footer_item {
@@ -429,22 +479,23 @@ border-radius: 8px;
   }
 
   .navbar {
-    background: #242d25;
+    background: var(--primary-color);
     margin-top: 0;
+    height: 75px;
   }
 
-  .banner{
+  .banner {
     padding-top: 150px !important;
     height: 100%;
   }
 
-  .banner .banner_content{
+  .banner .banner_content {
     flex-wrap: wrap;
   }
-  .banner .banner_content img.banner_img_1{
+  .banner .banner_content img.banner_img_1 {
     display: none;
   }
-  .banner .banner_content img.banner_img_2{
+  .banner .banner_content img.banner_img_2 {
     width: 100%;
     height: 500px;
     object-fit: cover;
@@ -461,13 +512,14 @@ border-radius: 8px;
     font-size: 6.5vw;
   }
 
-  .further_img_slider{
+  .further_img_slider {
     margin-top: 36px;
   }
 
-  .map_area{
+  .map_area {
     margin-top: 36px;
   }
 }
 
-@media screen and (max-width: 675px) {}
+@media screen and (max-width: 675px) {
+}

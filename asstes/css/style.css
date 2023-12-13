@@ -245,7 +245,7 @@ section {
   display: none;
 }
 
-.header.scrolled .logo h3,
+.header.scrolled .logo h2,
 .navbar-toggle .icons {
   color: var(--white-color) !important;
 }
@@ -305,7 +305,7 @@ section {
 }
 
 .banner .banner_content {
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;

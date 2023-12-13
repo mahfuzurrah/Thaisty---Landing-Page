@@ -230,14 +230,14 @@ section {
   color: var(--white-color) !important;
 }
 
-.header.scrolled .navbar .btn{
+.header.scrolled .navbar .btn {
   background: transparent;
-  border:1px solid var(--white-color);
+  border: 1px solid var(--white-color);
 }
 
-.header.scrolled .navbar .btn:hover{
-  background:#ce4318;
-  border:1px solid #ce4318;
+.header.scrolled .navbar .btn:hover {
+  background: #ce4318;
+  border: 1px solid #ce4318;
 }
 
 .navbar-toggle,
@@ -464,6 +464,10 @@ section {
 
 .footer_item .item {
   width: 250px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer_item .item .social_icons {
